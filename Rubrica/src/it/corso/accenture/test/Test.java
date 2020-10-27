@@ -18,23 +18,28 @@ public class Test {
 			break;
 		case "2":
 			
-			telefono.aggiungiContatto(menu.menuNome(), menu.menuNumero());
+			telefono.aggiungiContatto(menu.menuNome(), menu.menuNumero() );
 			break;
 		case "3":
 			JOptionPane.showMessageDialog(null, "Inserisci il nome del contatto da eliminare: ", "RUBRICA TELEFONICA",JOptionPane.PLAIN_MESSAGE);
-			telefono.eliminaContatto(menu.menuNome());
+			String n= menu.menuNome();
+			telefono.eliminaContatto(n, u-> u.equals(n));
 			break;
 		case "4":
 			JOptionPane.showMessageDialog(null, "Inserisci il nome del contatto da aggiornare: ", "RUBRICA TELEFONICA",JOptionPane.PLAIN_MESSAGE);
-			telefono.aggiornaContatto(menu.menuNome(), menu.menuNumero());
+			String a= menu.menuNome();
+			String b = menu.menuNumero();
+			telefono.aggiornaContatto(a,b,u -> u.equals(a));
 			break;
 		case "5":
 			JOptionPane.showMessageDialog(null, "Inserisci il nome del contatto da cercare: ", "RUBRICA TELEFONICA",JOptionPane.PLAIN_MESSAGE);
-			telefono.cercaNome(menu.menuNome());
+			String nome = menu.menuNome();
+			telefono.cercaNome(nome, u -> u.equals(nome));
 			break;
 		case "6":
 			JOptionPane.showMessageDialog(null, "Inserisci il numero del contatto da cercare: ", "RUBRICA TELEFONICA",JOptionPane.PLAIN_MESSAGE);
-			telefono.cercaNumero(menu.menuNumero());
+			String numero = menu.menuNumero();
+			telefono.cercaNumero(numero,u -> u.equals(numero) );
 			break;
 		case "7":
 			JOptionPane.showMessageDialog(null, "Programma Terminato", "PARCO AUTO", JOptionPane.PLAIN_MESSAGE);

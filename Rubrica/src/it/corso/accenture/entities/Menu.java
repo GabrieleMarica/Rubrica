@@ -24,6 +24,14 @@ public class Menu {
 		this.risposta = JOptionPane.showInputDialog(null, "INSERISCI NUMERO CONTATTO: ", "RUBRICA TELEFONICA", JOptionPane.PLAIN_MESSAGE);
 					return this.risposta;
 	}
+
+	public String getRisposta() {
+		return risposta;
+	}
+
+	public void setRisposta(String risposta) {
+		this.risposta = risposta;
+	}
 	
 }
 
